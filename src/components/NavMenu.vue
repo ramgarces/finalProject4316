@@ -11,7 +11,7 @@
 
 <style lang="postcss" scoped>
 nav {
-  @apply flex justify-center space-x-4;
+  @apply flex justify-center space-x-4 p-4;
 
   & .router-link-active {
     @apply underline underline-offset-4;
