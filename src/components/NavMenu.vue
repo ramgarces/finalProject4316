@@ -1,7 +1,11 @@
 <template>
   <nav>
     <RouterLink to="/">Home</RouterLink>
-    <RouterLink to="/other">Other</RouterLink>
+    <RouterLink to="/teamSelect">Team Selection</RouterLink>
+    <RouterLink to="/pokemonStats">Pokemon Stats</RouterLink>
+    <RouterLink to="/teams">Teams</RouterLink>
+    <RouterLink to="/user">User</RouterLink>
+    <RouterLink to="/login">Login</RouterLink>
   </nav>
 </template>
 
