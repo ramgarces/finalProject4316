@@ -21,7 +21,7 @@
 
 <style lang="postcss" scoped>
 nav {
-    @apply flex h-20 bg-red-700 text-yellow-300 px-6;
+    @apply flex h-20 bg-blue-800 text-yellow-300 px-6;
 
     & .router-link-active {
         @apply underline underline-offset-4;
@@ -34,8 +34,8 @@ nav {
             @apply flex gap-4;
 
             &-item {
-                @apply rounded-md px-4 py-2 hover:bg-yellow-500 
-                hover:text-blue-800;
+                @apply rounded-md px-4 py-2 hover:bg-yellow-300 
+                hover:text-red-600;
             }
         }
 
