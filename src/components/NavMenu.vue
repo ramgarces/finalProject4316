@@ -24,7 +24,7 @@ nav {
     @apply flex h-20 bg-blue-800 text-yellow-300 px-6 text-lg;
 
     & .router-link-active {
-        @apply underline underline-offset-4;
+        @apply bg-red-700;
     }
 
     .wrapper {
@@ -47,8 +47,8 @@ nav {
                 hover:text-red-600;
             }
             &-login {
-                @apply rounded-md px-4 py-2 bg-red-600 hover:bg-yellow-400 
-                hover:text-red-600;
+                @apply rounded-md px-4 py-2 bg-yellow-400 text-red-600
+                hover:text-yellow-400 hover:bg-red-600 ;
             }
         }
     }
