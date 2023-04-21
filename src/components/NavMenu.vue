@@ -34,7 +34,7 @@ nav {
             @apply flex gap-4;
 
             &-item {
-                @apply rounded-md px-4 py-2 hover:bg-yellow-300 
+                @apply rounded-md px-4 py-2 hover:bg-yellow-400 
                 hover:text-red-600;
             }
         }
@@ -43,12 +43,12 @@ nav {
             @apply flex gap-10;
 
             &-name {
-                @apply rounded-md px-4 py-2 hover:bg-yellow-500 
-                hover:text-blue-800;
+                @apply rounded-md px-4 py-2 hover:bg-yellow-400 
+                hover:text-red-600;
             }
             &-login {
-                @apply rounded-md px-4 py-2 hover:bg-yellow-500 
-                hover:text-blue-800;
+                @apply rounded-md px-4 py-2 bg-red-600 hover:bg-yellow-400 
+                hover:text-red-600;
             }
         }
     }
