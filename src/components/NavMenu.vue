@@ -8,7 +8,7 @@
                 Team Selection
             </RouterLink>
             <RouterLink to="/pokemonStats" class="menu-item">
-                Pokemon Stats
+                Pokémon Stats
             </RouterLink>
         </div>
         <div class="login">
@@ -21,17 +21,17 @@
 
 <style lang="postcss" scoped>
 nav {
-    @apply flex h-16 bg-blue-800 text-yellow-300 px-6 text-lg;
+    @apply flex h-20 bg-red-700 text-yellow-400 px-4 text-xl font-bold;
 
     & .router-link-active {
-        @apply bg-red-700;
+        @apply bg-blue-800;
     }
 
     .wrapper {
         @apply container mx-auto flex w-full items-center justify-between;
 
         .menu {
-            @apply flex gap-4;
+            @apply flex gap-6;
 
             &-item {
                 @apply rounded-md px-4 py-2 hover:bg-yellow-400 
