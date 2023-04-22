@@ -3,13 +3,13 @@
     <div class="wrapper">
         <div class="menu">
             <RouterLink to="/" class="menu-item">Home</RouterLink>
+            <RouterLink to="/teams" class="menu-item">Teams</RouterLink>
             <RouterLink to="/teamSelect" class="menu-item">
                 Team Selection
             </RouterLink>
             <RouterLink to="/pokemonStats" class="menu-item">
                 Pokemon Stats
             </RouterLink>
-            <RouterLink to="/teams" class="menu-item">Teams</RouterLink>
         </div>
         <div class="login">
             <RouterLink to="/user" class="login-name">User</RouterLink>
