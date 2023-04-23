@@ -1,13 +1,13 @@
 <script setup>
   import SearchBar from '@/components/SearchBar.vue';
+  import MainCards from '@/components/MainCards.vue';
 </script>
 
 <template>
   <div class="wrapper">
     <SearchBar />
-    <main class="flex min-h-screen items-center justify-center">
-      <h1 class="text-6xl font-thin text-slate-800">Team Select Page</h1>
-    </main>
+    <p class="instructions">Select a Pokémon to add them to your team</p>
+    <MainCards />
   </div>
 </template>
 

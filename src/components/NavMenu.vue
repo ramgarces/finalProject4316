@@ -8,7 +8,7 @@
                 Team Selection
             </RouterLink>
             <RouterLink to="/pokemonStats" class="menu-item">
-                Pokémon Stats
+                Pokédex
             </RouterLink>
         </div>
         <div class="login">
