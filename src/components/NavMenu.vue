@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import { useAuth } from '@/composables/useAuth'
 
-const {isAuthenticated} = useAuth()
+const {isAuthenticated, logout, user} = useAuth()
 </script>
 
 <template>
@@ -19,9 +19,16 @@ const {isAuthenticated} = useAuth()
             </RouterLink>
         </div>
         <div class="login">
+            <p v-show="isAuthenticated" class="py-4">
+                Welcome back, Trainer
+            </p>
             <div v-if="isAuthenticated">
-                <RouterLink to="/user" class="login-name">User</RouterLink>
-                <RouterLink to="/login" class="login-logout">Logout</RouterLink>
+                <RouterLink to="/user" class="login-name">
+                    {{ user.name }}
+                </RouterLink>
+                <button to="/login" class="login-logout" @click="logout">
+                    Logout
+                </button>
             </div>
             <div v-else>
                 <RouterLink to="/login" class="login-login">Login</RouterLink>
@@ -57,8 +64,7 @@ nav {
                 @apply py-2
             }
             &-name {
-                @apply rounded-md px-4 py-2 hover:bg-yellow-400 
-                hover:text-red-600;
+                @apply rounded-md px-2 py-2 underline underline-offset-4 hover:text-white;
             }
             &-login {
                 @apply rounded-md px-4 py-2 bg-green-600 text-white

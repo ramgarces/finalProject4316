@@ -24,12 +24,19 @@ const user = ref({})
 
 export const useAuth = () => {
     const login = (username, password) => {
-        const user = dbUsers.find((u) => u.username === username && u.password === password)
-        if (user) {
-            const { name, role, email, username } = user
+        const dbUser = dbUsers.find((u) => u.username === username && u.password === password)
+        if (dbUser) {
+            const { name, role, email, username } = dbUser
             isAuthenticated.value = true
             user.value = { name, role, email, username }
+            return true
         }
+        return false
     }
-    return { isAuthenticated, user, login }
+
+    const logout = () => {
+        isAuthenticated.value = false
+        user.value = {}
+    }
+    return { isAuthenticated, user, login, logout }
 }
