@@ -2,7 +2,9 @@
 import { ref } from 'vue'
 import { useAuth } from '@/composables/useAuth'
 
-const {isAuthenticated, logout, user} = useAuth()
+const { isAuthenticated, logout, user } = useAuth()
+
+const brand = ref(import.meta.env.VITE_APP_NAME)
 </script>
 
 <template>
@@ -18,6 +20,7 @@ const {isAuthenticated, logout, user} = useAuth()
                 Pokédex
             </RouterLink>
         </div>
+        <p class="text-white">{{brand}}</p>
         <div class="login">
             <p v-show="isAuthenticated" class="py-4">
                 Welcome back, Trainer
