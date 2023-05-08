@@ -1,26 +1,27 @@
 <script setup>
 import SixStack from '@/components/SixStack.vue';
+import { useAuth } from '@/composables/useAuth';
+
+const {isAuthenticated, logout, user} = useAuth()
 </script>
 
 <template>
-  <p class="teams-title">User's Teams</p>
+  <h1 v-show="isAuthenticated" class="teams-title">{{user.name}}'s Teams</h1>
   <div class="wrapper">
-    <p class="teams-1">Your Team #1</p>
+    <h1 class="teams-1">{{ user.name }}'s Team #1</h1>
     <SixStack />
     <button type="button">View Details</button>
-    <p class="teams-2">Your Team #2</p>
+    <h1 class="teams-2">{{ user.name }}'s Team #2</h1>
     <SixStack />
     <button type="button">View Details</button>
-    <p class="teams-3">Your Team #3</p>
-    <SixStack />
-    <button type="button">View Details</button>
+    
   </div>
 </template>
 
 <style lang="postcss" scoped>
   .wrapper {
     @apply container flex flex-col mx-auto py-6;
-    p {
+    h1 {
       @apply p-6 font-semibold text-5xl text-yellow-400;
     }
     button {
