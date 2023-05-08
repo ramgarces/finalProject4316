@@ -27,7 +27,7 @@ const brand = ref(import.meta.env.VITE_APP_NAME)
             </p>
             <div v-if="isAuthenticated">
                 <RouterLink to="/user" class="login-name">
-                    {{ user.name }}
+                    {{ user?.email }}
                 </RouterLink>
                 <button to="/login" class="login-logout" @click="logout">
                     Logout
