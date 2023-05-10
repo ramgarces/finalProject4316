@@ -10,8 +10,8 @@ const routes = [
   { path: '/login', name: 'Login', component: () => import('@/views/LoginPage.vue') },
   { path: '/user', name: 'User', component: () => import('@/views/UserPage.vue'), meta: { requiresAuth: true }  },
   { path: '/teamSelect', name: 'Team Select', component: () => import('@/views/TeamSelectPage.vue') },
-  { path: '/teams', name: 'Teams', component: () => import('@/views/TeamsPage.vue') },
-  { path: '/pokemonStats', name: 'Pokemon Stats', component: () => import('@/views/PokemonStatsPage.vue') },
+  { path: '/pokedex', name: 'Pokedex', component: () => import('@/views/PokedexPage.vue') },
+  { path: '/pokemon/:id', name: 'Pokemon', component: () => import('@/views/PokemonStats.vue')}
 ]
 
 const router = createRouter({
