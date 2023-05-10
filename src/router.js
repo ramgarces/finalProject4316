@@ -11,7 +11,7 @@ const routes = [
   { path: '/user', name: 'User', component: () => import('@/views/UserPage.vue'), meta: { requiresAuth: true }  },
   { path: '/teamSelect', name: 'Team Select', component: () => import('@/views/TeamSelectPage.vue') },
   { path: '/pokedex', name: 'Pokedex', component: () => import('@/views/PokedexPage.vue') },
-  { path: '/pokemon/:id', name: 'Pokemon', component: () => import('@/views/PokemonStats.vue')}
+  { path: '/pokemon/:name', name: 'Pokemon', component: () => import('@/views/PokemonStats.vue')}
 ]
 
 const router = createRouter({

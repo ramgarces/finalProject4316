@@ -1,7 +1,9 @@
 <script setup>
   import SearchBar from '@/components/SearchBar.vue';
   import BaseCard from '@/components/BaseCard.vue';
-  import usePokemon from '@/composables/usePokemon'
+import usePokemon from '@/composables/usePokemon'
+
+const { pokemons, fetchPokemons, loadMore } = usePokemon()
 </script>
 
 <template>
@@ -10,14 +12,16 @@
     <button
       title="Load Pokemon"
       class="z-90 fixed bottom-8 right-8 flex h-20 w-20 items-center justify-center
-      rounded-full bg-red-600 text-4xl text-white drop-shadow-lg duration-300">
-      🍙
+      rounded-full  text-4xl text-white drop-shadow-lg duration-300"
+      @click="loadMore">
+      <img src="../assets/Poké_Ball_icon.svg.png" alt="" srcset="" />
     </button>
     <p class="instructions">Select a Pokémon to view stats</p>
-    <div class="container mx-auto grid grid-cols-4 gap-4 py-8">
+    <p class="instructions">Click the Pokéball (bottom-right) to load Pokémon</p>
+    <div class="container mx-auto grid grid-cols-5 gap-4 py-8">
       <BaseCard
         v-for="pokemon in pokemons"
-        :key="pokemon._id"
+        :key="pokemon.id"
         :pokemon="pokemon"
       />
     </div>
