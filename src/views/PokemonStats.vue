@@ -21,9 +21,9 @@ onMounted(async() => {
             {{ currentPokemon.name.charAt(0).toUpperCase() +
             currentPokemon.name.slice(1) }}
         </h1>
-        <div class="stats-container flex gap-2 max-w-6xl">
+        <div class="stats-container flex gap-2 max-w-7xl">
 
-            <div class="stats-left flex flex-col gap-10  flex-1">
+            <div class="stats-left flex flex-col gap-10 flex-1/2">
                 <h2>
                     National Pokedex Number: 
                     <span class="font-bold pl-5 text-yellow-400">
@@ -49,7 +49,7 @@ onMounted(async() => {
                     </span>
                 </h2>
             </div>
-            <div class="stats-right flex-2">
+            <div class="stats-right flex-1">
                 <h2 v-if="currentPokemon.moves">
                     Moves: 
                     <span class="font-bold pl-5 text-yellow-400 max-w-md">
