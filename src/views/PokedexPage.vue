@@ -1,14 +1,17 @@
 <script setup>
-  import SearchBar from '@/components/SearchBar.vue';
-  import BaseCard from '@/components/BaseCard.vue';
-import usePokemon from '@/composables/usePokemon'
+  import BaseCard from '@/components/BaseCard.vue'
+  import usePokemon from '@/composables/usePokemon'
+  import { onMounted } from 'vue';
 
 const { pokemons, fetchPokemons, loadMore } = usePokemon()
+
+onMounted(async () => {
+  await loadMore()
+})
 </script>
 
 <template>
   <div class="wrapper">
-    <SearchBar />
     <button
       title="Load Pokemon"
       class="z-90 fixed bottom-8 right-8 flex h-20 w-20 items-center justify-center
@@ -18,7 +21,7 @@ const { pokemons, fetchPokemons, loadMore } = usePokemon()
     </button>
     <p class="instructions">Select a Pokémon to view stats</p>
     <p class="instructions">Click the Pokéball (bottom-right) to load Pokémon</p>
-    <div class="container mx-auto grid grid-cols-5 gap-4 py-8">
+    <div class="container mx-auto grid grid-cols-8 gap-4 py-8">
       <BaseCard
         v-for="pokemon in pokemons"
         :key="pokemon.id"

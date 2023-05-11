@@ -12,9 +12,6 @@ const brand = ref(import.meta.env.VITE_APP_NAME)
     <div class="wrapper">
         <div class="menu">
             <RouterLink to="/" class="menu-item">Home</RouterLink>
-            <RouterLink to="/teamSelect" class="menu-item">
-                Team Selection
-            </RouterLink>
             <RouterLink to="/pokedex" class="menu-item">
                 Pokédex
             </RouterLink>

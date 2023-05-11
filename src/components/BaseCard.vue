@@ -6,8 +6,13 @@ const props = defineProps({
             id: -1,
             name: 'Unknown',
             imageUrl: 'https://via.placeholder.com/150',
+            types: []
         }),
     },
+    pokemonId: {
+        type: Number,
+        required: true,
+    }
 })
 console.log(props)
 function getPokemonId(pokemon) {
@@ -28,12 +33,13 @@ function capitalize(str) {
     :to="`/pokemon/${props.pokemon.name}`"
     class="rounded-lg bg-yellow-400 shadow-lg"
     >
+    <h2 class="text-4xl font-semibold text-blue-700 p-2"> # {{ getPokemonId(pokemon) }}</h2>
         <img 
             class="w-full rounded-t-lg object-cover"
             :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${getPokemonId(props.pokemon)}.png`"
         />
         <div class="p-4 text-center">
-            <h2 class="text-2xl font-semibold text-red-700">
+            <h2 class="text-2xl font-semibold text-blue-700">
                 {{ capitalize(props.pokemon.name) }}
             </h2>
         </div>
